@@ -1,31 +1,26 @@
-package inheritance;
+package inheritanceprac;
 
 public class VIPCustomer extends Customer{
 	
-	private int agentID;
 	private double saleRatio;
+	private int agentID;
 	
-	public VIPCustomer(int customerID, String customerName, int agentID) {
+	VIPCustomer(int customerID, String customerName, int agentID) {
 		super(customerID, customerName);
 		customerGrade = "VIP";
 		bonusRatio = 0.05;
 		saleRatio = 0.1;
 		this.agentID = agentID;
 	}
-	
-	public int getAgentID() {
-		return agentID;
-	}
-	
+
 	public int calcPrice(int price) {
-		bonusPoint += price * bonusRatio;
+		bonusPoint += (price * bonusRatio);
 		return price - (int)(price * saleRatio);
 	}
 
 	@Override
 	public String showCustomerInfo() {
-		// TODO Auto-generated method stub
-		return super.showCustomerInfo() + " 담당 상담원 ID는 " + agentID + "입니다.";
+		return super.showCustomerInfo() + "담당 상담원 ID는 " + agentID + "입니다.";
 	}
 
 	
