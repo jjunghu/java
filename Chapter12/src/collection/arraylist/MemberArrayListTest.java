@@ -1,0 +1,9 @@
+package collection.arraylist;
+
+public class MemberArrayListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+
+}
